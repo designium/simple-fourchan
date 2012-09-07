@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["designium@gmail.com"]
   gem.description   = "4chan is a gem that fetches posts from 4chan. Current version only fetches a specific listing now and it works only for READ. There's the 4chan.js that posts but the documentation is not clear yet. Index will come once it 4chan releases it or you discover how to fetch it though json."
   gem.summary       = "4chan is a gem that fetches posts from 4chan. Current version only fetches a specific listing now and it works only for READ. There's the 4chan.js that posts but the documentation is not clear yet. Index will come once it 4chan releases it or you discover how to fetch it though json."
-  gem.homepage      = "http://4chan.org"
+  gem.homepage      = "https://github.com/designium/simple-fourchan"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
