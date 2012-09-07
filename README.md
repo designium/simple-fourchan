@@ -32,6 +32,8 @@ It returns an array of 4chan posts.
 
 You should start like this:
 
+    Fourchan::Post.new "BOARD_LETTER", "THREAD_NUMBER"
+
     array = Fourchan::Post.new "w", "1403853"
     posts = array.all
 
