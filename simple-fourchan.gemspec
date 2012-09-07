@@ -16,4 +16,5 @@ Gem::Specification.new do |gem|
   gem.version       = Simple::Fourchan::VERSION
   gem.post_install_message = "***************************************\n     Thanks for using 4chan gem    \n                                       \n                   LOL                 \n          U belongs to us now.         \n***************************************\n"
 
+  gem.add_dependency('json')
 end
