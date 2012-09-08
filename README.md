@@ -1,10 +1,19 @@
 # 4chan
 
-4chan is a gem that fetches posts from 4chan. Current version only fetches a specific listing now and it works only for READ. There's the 4chan.js that posts but the documentation is not clear yet. Index will come once it 4chan releases it or you discover how to fetch it though json.
+Simple 4chan is a gem that fetches posts from 4chan. A complete reading solution to fetch posts from 4chan into your ruby, any rack-based or rails app. You set the board and simple-fourchan will fetch all posts from a board or thread number.
+
+BUGS:
+
+Some boards are not available from 4chan. I've contacted them to see what's happening.
+If you reach a board where simple-fourchan cannot fetch, you will receive an error message.
+
+## Updates
+
+SEP - 08 - 2012: Update with board reading based from dongfix update.
 
 ## Installation
 
-Just do in your Gemfile or install and do require '4chan'.
+Just do in your Gemfile or install and do require 'simple-fourchan'.
 
     gem 'simple-fourchan'
 
@@ -18,7 +27,17 @@ Or install it yourself as:
 
 ## Usage
 
-For now, you can only fetch a reply list to a subject.
+# Fetching all threads from a board.
+
+    require 'simple-fourchan'
+
+    board = Fourchan::Board.new "w"
+
+    board.threads
+
+It will return an array with hashes containing basic info from each thread.
+
+# For now, you can fetch a reply list from a thread number.
 
     array = Fourchan::Post.new "w", "1403853"
 

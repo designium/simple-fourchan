@@ -4,8 +4,8 @@ require File.expand_path('../lib/simple-fourchan/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Chim Kan"]
   gem.email         = ["designium@gmail.com"]
-  gem.description   = "4chan is a gem that fetches posts from 4chan. Current version only fetches a specific listing now and it works only for READ. There's the 4chan.js that posts but the documentation is not clear yet. Index will come once it 4chan releases it or you discover how to fetch it though json."
-  gem.summary       = "4chan is a gem that fetches posts from 4chan. Current version only fetches a specific listing now and it works only for READ. There's the 4chan.js that posts but the documentation is not clear yet. Index will come once it 4chan releases it or you discover how to fetch it though json."
+  gem.description   = "Simple 4chan is a gem that fetches posts from 4chan. A complete reading solution to fetch posts from 4chan into your ruby, any rack-based or rails app. You set the board and simple-fourchan will fetch all posts from a board or thread number."
+  gem.summary       = "Simple 4chan is a gem that fetches posts from 4chan. A complete reading solution to fetch posts from 4chan into your ruby, any rack-based or rails app. You set the board and simple-fourchan will fetch all posts from a board or thread number."
   gem.homepage      = "https://github.com/designium/simple-fourchan"
 
   gem.files         = `git ls-files`.split($\)
