@@ -18,7 +18,7 @@ module Fourchan
             tim = post["tim"]
             ext = post["ext"]
             post.merge!({"image" => "http://images.4chan.org/#{@board}/src/#{tim}.#{ext}"}) unless tim.nil?
-            post.merge!({"thumb" => "http://thumbs.4chan.org/#{@board}/thumb/#{tim}s.#{ext}"}) unless tim.nil?
+            post.merge!({"thumb" => "http://thumbs.4chan.org/#{@board}/thumb/#{tim}s.jpg"}) unless tim.nil?
             post.merge!({"link" => "http://boards.4chan.org/#{@board}/res/#{thread}"})
             @posts << OpenStruct.new(post)
           end
