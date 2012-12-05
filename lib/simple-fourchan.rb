@@ -16,7 +16,8 @@ module Fourchan
         temp = JSON.parse(open("http://api.4chan.org/#{@board}/res/#{thread}.json").read)["posts"]
           temp.each do |post|
             tim = post["tim"]
-            post.merge!({"image" => "http://images.4chan.org/#{@board}/src/#{tim}.jpg"}) unless tim.nil?
+            ext = post["ext"]
+            post.merge!({"image" => "http://images.4chan.org/#{@board}/src/#{tim}.#{ext}"}) unless tim.nil?
             post.merge!({"thumb" => "http://thumbs.4chan.org/#{@board}/thumb/#{tim}s.jpg"}) unless tim.nil?
             post.merge!({"link" => "http://boards.4chan.org/#{@board}/res/#{thread}"})
             @posts << OpenStruct.new(post)
